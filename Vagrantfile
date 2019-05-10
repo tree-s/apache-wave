@@ -33,7 +33,7 @@ Vagrant.configure(2) do |config|
 
     ubuntu.vm.provider "virtualbox" do |vb|
       vb.name = "Apache Wave dev - Ubuntu"
-      vb.memory = 2048
+      vb.memory = 3096
       vb.cpus = 1
     end
   end
@@ -47,7 +47,7 @@ Vagrant.configure(2) do |config|
 
     fedora.vm.provider "virtualbox" do |vb|
       vb.name = "Apache Wave dev - Fedora"
-      vb.memory = 2048
+      vb.memory = 3096
       vb.cpus = 1
     end
   end
