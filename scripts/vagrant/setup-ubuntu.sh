@@ -42,7 +42,7 @@ sudo mkdir /opt/apache/wave/
 sudo mkdir /opt/apache/wave/apache-wave/config/
 
 cd /vagrant/distributions
-sudo tar -C /opt/apache/wave -zxvf apache-wave-bin-$WAVE_VERSION.tar.gz
+sudo tar -C /opt/apache/wave -jxvf apache-wave-bin-$WAVE_VERSION.tar.gz
 sudo cp /vagrant/scripts/vagrant/application.conf /opt/apache/wave/apache-wave/config/application.conf
 cd /vagrant
 
