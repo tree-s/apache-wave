@@ -39,6 +39,7 @@ cd /vagrant
 WAVE_VERSION=`sed "s/[\\t ]*=[\\t ]*/=/g" /vagrant/wave/build.gradle | grep ^version= | cut -f2 -d= | tr -d '"'`
 
 sudo mkdir /opt/apache/wave/
+sudo mkdir /opt/apache/wave/apache-wave/
 sudo mkdir /opt/apache/wave/apache-wave/config/
 
 cd /vagrant/distributions
