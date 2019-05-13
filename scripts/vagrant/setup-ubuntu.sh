@@ -36,9 +36,13 @@ cd /vagrant
 ./gradlew clean createDist
 
 # Get Apache Wave version
-WAVE_VERSION=`sed "s/[\\t ]*=[\\t ]*/=/g" wave/config/wave.conf | grep ^version= | cut -f2 -d=`
+WAVE_VERSION=`sed "s/[\\t ]*=[\\t ]*/=/g" /vagrant/wave/build.gradle | grep ^version= | cut -f2 -d= | tr -d '"'`
 
-cd distributions
+sudo mkdir /opt/apache/wave/
+sudo mkdir /opt/apache/wave/apache-wave/config/
+
+cd /vagrant/distributions
 sudo tar -C /opt/apache/wave -zxvf apache-wave-bin-$WAVE_VERSION.tar.gz
-cd ..
-cp scripts/vagrant/application.conf /opt/apache/wave/apache-wave/config/application.conf
+sudo cp /vagrant/scripts/vagrant/application.conf /opt/apache/wave/apache-wave/config/application.conf
+cd /vagrant
+
